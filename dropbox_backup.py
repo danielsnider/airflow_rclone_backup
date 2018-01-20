@@ -37,7 +37,7 @@ def _rclone_copy(**context):
 
     for folder in new_folders:
         folder_name = os.path.basename(os.path.normpath(folder))
-        cmd = 'rclone copy "%s" dropbox:"/Backup/OPRETTA/Operetta Raw Data/Mammalian cells/%s" -v' % (folder, folder_name)
+        cmd = 'rclone copy "%s" dropbox:"/Backup/OPRETTA/Operetta Raw Data/Mammalian cells/%s" -v --filter-from /home/dan/airflow_rclone_backup/filter-dropbox.txt' % (folder, folder_name)
         print "Executing command: %s" % cmd
         p = subprocess.Popen(cmd, shell=True)
         p.wait()

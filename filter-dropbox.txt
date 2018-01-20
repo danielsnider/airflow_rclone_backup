@@ -1,0 +1,11 @@
+# https://www.dropbox.com/en/help/145
+- desktop.ini
+- Thumbs.db
+- .DS_Store
+- icon\r
+- .dropbox
+- .dropbox.attr
+- ~*.tmp
+- ~$*
+- .~*
+
